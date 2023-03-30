@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+
+	</head>
+	<body>
+		<p id="123" />
+	    <script>
+var changeCounter = (function () {
+    let start = 0;
+    return function (value) {
+        if (start + value < 0) {
+            alert("Anfang Tierliste");
+            return start;
+        }
+        if (start + value > 10) {
+            alert("Ende Tierliste");
+            return start;
+        }
+        start += value;
+        return start;
+    }
+})();
+				elem = document.getElementById("123");
+				elem.innerHTML = changeCounter(5);
+        </script>
+	</body>
+</html>
+
+
